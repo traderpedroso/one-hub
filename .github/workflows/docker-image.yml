@@ -3,7 +3,7 @@ name: one-api docker image
 on:
   push:
     branches:
-      - main
+      - 'main'
     
 
 jobs:
