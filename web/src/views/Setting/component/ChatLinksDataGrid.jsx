@@ -11,15 +11,15 @@ import { showError } from 'utils/common';
 
 function validation(row) {
   if (row.name === '') {
-    return '名称不能为空';
+    return 'Name cannot be empty';
   }
 
   if (row.url === '') {
-    return 'URL不能为空';
+    return 'URL cannot be empty';
   }
 
   if (row.sort != '' && !/^[0-9]\d*$/.test(row.sort)) {
-    return '排序必须为正整数';
+    return 'The sort order must be a positive integer';
   }
 
   return false;
@@ -42,7 +42,7 @@ function EditToolbar({ setRows, setRowModesModel }) {
   return (
     <GridToolbarContainer>
       <Button color="primary" startIcon={<AddIcon />} onClick={handleClick}>
-        新增
+       New
       </Button>
     </GridToolbarContainer>
   );
@@ -138,7 +138,7 @@ const ChatLinksDataGrid = ({ links, onChange }) => {
       {
         field: 'name',
         sortable: true,
-        headerName: '名称',
+        headerName: 'nome',
         flex: 1,
         minWidth: 220,
         editable: true,

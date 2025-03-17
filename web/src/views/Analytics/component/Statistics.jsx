@@ -162,7 +162,7 @@ export default function Overview() {
           content={rechargeStatistics.total}
           subContent={
             <>
-              兑换码: {rechargeStatistics.Redemption} <br /> 订单: {rechargeStatistics.Oder} / {rechargeStatistics.OderContent}
+              Redeem code: {rechargeStatistics.Redemption} <br /> Order: {rechargeStatistics.Oder} / {rechargeStatistics.OderContent}
             </>
           }
         />

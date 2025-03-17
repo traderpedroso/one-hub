@@ -23,8 +23,8 @@ import IconWrapper from 'ui-component/IconWrapper';
 
 const validationSchema = Yup.object().shape({
   is_edit: Yup.boolean(),
-  id: Yup.string().required('ID不能为空'),
-  name: Yup.string().required('名称不能为空'),
+  id: Yup.string().required('ID cannot be empty'),
+  name: Yup.string().required('ID cannot be empty'),
   icon: Yup.string()
 });
 
