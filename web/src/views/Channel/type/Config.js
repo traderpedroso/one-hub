@@ -1,3 +1,4 @@
+
 const defaultConfig = {
   input: {
     name: '',
@@ -16,39 +17,39 @@ const defaultConfig = {
     pre_cost: 1
   },
   inputLabel: {
-    name: '渠道名称',
-    type: '渠道类型',
-    base_url: '渠道API地址',
-    key: '密钥',
-    other: '其他参数',
-    proxy: '代理地址',
-    test_model: '测速模型',
-    models: '模型',
-    model_mapping: '模型映射关系',
-    groups: '用户组',
-    only_chat: '仅支持聊天',
-    tag: '标签',
-    provider_models_list: '',
-    pre_cost: '预计费选项'
+    name: 'Channel Name',
+    type: 'Channel Type',
+    base_url: 'Channel API Address',
+    key: 'Key',
+    other: 'Other Parameters',
+    proxy: 'Proxy Address',
+    test_model: 'Speed Test Model',
+    models: 'Models',
+    model_mapping: 'Model Mapping',
+    groups: 'User Groups',
+    only_chat: 'Chat Only',
+    tag: 'Tag',
+    provider_models_list: '', //This was already empty
+    pre_cost: 'Pre-cost Options'
   },
   prompt: {
-    type: '请选择渠道类型',
-    name: '请为渠道命名',
-    base_url: '可空，请输入中转API地址，例如通过cloudflare中转',
-    key: '请输入渠道对应的鉴权密钥',
+    type: 'Please select the channel type',
+    name: 'Please name the channel',
+    base_url: 'Optional, please enter the relay API address, for example, relay through Cloudflare',
+    key: 'Please enter the authentication key corresponding to the channel',
     other: '',
-    proxy: '单独设置代理地址，支持http和socks5，例如：http://127.0.0.1:1080',
-    test_model: '用于测试使用的模型，为空时无法测速,如：gpt-3.5-turbo，仅支持chat模型',
+    proxy: 'Set the proxy address separately, support http and socks5, for example: http://127.0.0.1:1080',
+    test_model: 'The model used for testing, it cannot be tested when it is empty, such as: gpt-3.5-turbo, only supports chat models',
     models:
-      '请选择该渠道所支持的模型,你也可以输入通配符*来匹配模型，例如：gpt-3.5*，表示支持所有gpt-3.5开头的模型，*号只能在最后一位使用，前面必须有字符，例如：gpt-3.5*是正确的，*gpt-3.5是错误的',
-    model_mapping: '模型映射关系：例如用户请求A模型，实际转发给渠道的模型为B。在B模型加前缀+，表示使用传入模型计费，例如：+gpt-3.5-turbo',
-    model_headers: '自定义模型请求头，例如：{"key": "value"}',
-    groups: '请选择该渠道所支持的用户组',
-    only_chat: '如果选择了仅支持聊天，那么遇到有函数调用的请求会跳过该渠道',
-    provider_models_list: '必须填写所有数据后才能获取模型列表',
-    tag: '你可以为你的渠道打一个标签，打完标签后，可以通过标签进行批量管理渠道，注意：设置标签后某些设置只能通过渠道标签修改，无法在渠道列表中修改。',
+      'Please select the models supported by this channel. You can also enter the wildcard * to match the model, for example: gpt-3.5*, which means that all models starting with gpt-3.5 are supported. The * can only be used at the end. There must be characters before it, for example: gpt-3.5* is correct, *gpt-3.5 is wrong',
+    model_mapping: 'Model mapping relationship: For example, if a user requests model A, the model actually forwarded to the channel is model B. Adding a prefix + to model B means that the incoming model is used for billing, for example: +gpt-3.5-turbo',
+    model_headers: 'custom model request header, for example: {"key": "value"}',
+    groups: 'Please select the user groups supported by this channel',
+    only_chat: 'If only chat is selected, requests with function calls will skip this channel',
+    provider_models_list: 'You must fill in all the data before you can get the model list',
+    tag: 'You can tag your channel. After tagging, you can manage channels in batches through tags. Note: After setting tags, some settings can only be modified through channel tags and cannot be modified in the channel list.',
     pre_cost:
-      '这里选择预计费选项，用于预估费用，如果你觉得计算图片占用太多资源，可以选择关闭图片计费。但是请注意：有些渠道在stream下是不会返回tokens的，这会导致输入tokens计算错误。'
+      'Here, select the estimated cost option for pre-cost estimation. If you think that calculating image usage takes up too many resources, you can choose to turn off image billing.  But please note: Some channels will not return tokens under stream, which will cause incorrect input token calculations.'
   },
   modelGroup: 'OpenAI'
 };
@@ -56,12 +57,12 @@ const defaultConfig = {
 const typeConfig = {
   1: {
     inputLabel: {
-      provider_models_list: '从OpenAI获取模型列表'
+      provider_models_list: 'Get model list from OpenAI'
     }
   },
   8: {
     inputLabel: {
-      provider_models_list: '从渠道获取模型列表'
+      provider_models_list: 'Get model list from channel'
     },
     prompt: {
       other: ''
@@ -70,12 +71,12 @@ const typeConfig = {
   3: {
     inputLabel: {
       base_url: 'AZURE_OPENAI_ENDPOINT',
-      other: '默认 API 版本',
-      provider_models_list: '从Azure获取已部署模型列表'
+      other: 'Default API Version',
+      provider_models_list: 'Get deployed model list from Azure'
     },
     prompt: {
-      base_url: '请填写AZURE_OPENAI_ENDPOINT',
-      other: '请输入默认API版本，例如：2024-05-01-preview'
+      base_url: 'Please fill in AZURE_OPENAI_ENDPOINT',
+      other: 'Please enter the default API version, for example: 2024-05-01-preview'
     }
   },
   11: {
@@ -87,7 +88,7 @@ const typeConfig = {
   },
   14: {
     inputLabel: {
-      provider_models_list: '从Claude获取模型列表'
+      provider_models_list: 'Get model list from Claude'
     },
     input: {
       models: [
@@ -141,7 +142,7 @@ const typeConfig = {
       test_model: 'ERNIE-Speed'
     },
     prompt: {
-      key: '按照如下格式输入：APIKey|SecretKey, 如果开启了OpenAI API，请直接输入APIKEY'
+      key: 'Enter in the following format: APIKey|SecretKey, If OpenAI API is enabled, please enter APIKEY directly'
     },
     modelGroup: 'Baidu'
   },
@@ -154,28 +155,28 @@ const typeConfig = {
   },
   17: {
     inputLabel: {
-      other: '插件参数',
-      provider_models_list: '从Ali获取模型列表'
+      other: 'Plugin Parameters',
+      provider_models_list: 'Get model list from Ali'
     },
     input: {
       models: ['qwen-turbo', 'qwen-plus', 'qwen-max', 'qwen-max-longcontext', 'text-embedding-v1'],
       test_model: 'qwen-turbo'
     },
     prompt: {
-      other: '请输入插件参数，即 X-DashScope-Plugin 请求头的取值'
+      other: 'Please enter the plugin parameters, that is, the value of the X-DashScope-Plugin request header'
     },
     modelGroup: 'Ali'
   },
   18: {
     inputLabel: {
-      other: '版本号'
+      other: 'Version Number'
     },
     input: {
       models: ['SparkDesk', 'SparkDesk-v1.1', 'SparkDesk-v2.1', 'SparkDesk-v3.1', 'SparkDesk-v3.5']
     },
     prompt: {
-      key: '按照如下格式输入：APPID|APISecret|APIKey',
-      other: '请输入版本号，例如：v3.1'
+      key: 'Enter in the following format: APPID|APISecret|APIKey',
+      other: 'Please enter the version number, for example: v3.1'
     },
     modelGroup: 'Xunfei'
   },
@@ -188,7 +189,7 @@ const typeConfig = {
   },
   22: {
     prompt: {
-      key: '按照如下格式输入：APIKey-AppId，例如：fastgpt-0sp2gtvfdgyi4k30jwlgwf1i-64f335d84283f05518e9e041'
+      key: 'Enter in the following format: APIKey-AppId, for example: fastgpt-0sp2gtvfdgyi4k30jwlgwf1i-64f335d84283f05518e9e041'
     }
   },
   23: {
@@ -197,21 +198,21 @@ const typeConfig = {
       test_model: 'ChatStd'
     },
     prompt: {
-      key: '按照如下格式输入：AppId|SecretId|SecretKey'
+      key: 'Enter in the following format: AppId|SecretId|SecretKey'
     },
     modelGroup: 'Tencent'
   },
   25: {
     inputLabel: {
-      other: '版本号',
-      provider_models_list: '从Gemini获取模型列表'
+      other: 'Version Number',
+      provider_models_list: 'Get model list from Gemini'
     },
     input: {
       models: ['gemini-pro', 'gemini-pro-vision', 'gemini-1.0-pro', 'gemini-1.5-pro'],
       test_model: 'gemini-pro'
     },
     prompt: {
-      other: '请输入版本号，例如：v1'
+      other: 'Please enter the version number, for example: v1'
     },
     modelGroup: 'Google Gemini'
   },
@@ -224,7 +225,7 @@ const typeConfig = {
   },
   24: {
     inputLabel: {
-      other: '位置/区域'
+      other: 'Location/Region'
     },
     input: {
       models: ['tts-1', 'tts-1-hd']
@@ -232,7 +233,7 @@ const typeConfig = {
     prompt: {
       test_model: '',
       base_url: '',
-      other: '请输入你 Speech Studio 的位置/区域，例如：eastasia'
+      other: 'Please enter the location/region of your Speech Studio, for example: eastasia'
     }
   },
   27: {
@@ -248,13 +249,13 @@ const typeConfig = {
       test_model: 'deepseek-chat'
     },
     inputLabel: {
-      provider_models_list: '从Deepseek获取模型列表'
+      provider_models_list: 'Get model list from Deepseek'
     },
     modelGroup: 'Deepseek'
   },
   29: {
     inputLabel: {
-      provider_models_list: '从Moonshot获取模型列表'
+      provider_models_list: 'Get model list from Moonshot'
     },
     input: {
       models: ['moonshot-v1-8k', 'moonshot-v1-32k', 'moonshot-v1-128k'],
@@ -275,7 +276,7 @@ const typeConfig = {
       test_model: 'open-mistral-7b'
     },
     inputLabel: {
-      provider_models_list: '从Mistral获取模型列表'
+      provider_models_list: 'Get model list from Mistral'
     },
     modelGroup: 'Mistral'
   },
@@ -285,7 +286,7 @@ const typeConfig = {
       test_model: 'llama2-7b-2048'
     },
     inputLabel: {
-      provider_models_list: '从Groq获取模型列表'
+      provider_models_list: 'Get model list from Groq'
     },
     modelGroup: 'Groq'
   },
@@ -302,7 +303,7 @@ const typeConfig = {
       test_model: 'claude-3-haiku-20240307'
     },
     prompt: {
-      key: '按照如下格式输入：Region|AccessKeyID|SecretAccessKey|SessionToken 其中SessionToken可不填空'
+      key: 'Enter in the following format: Region|AccessKeyID|SecretAccessKey|SessionToken, where SessionToken can be left empty'
     },
     modelGroup: 'Anthropic'
   },
@@ -335,8 +336,8 @@ const typeConfig = {
       ]
     },
     prompt: {
-      key: '密钥填写midjourney-proxy的密钥，如果没有设置密钥，可以随便填',
-      base_url: '地址填写midjourney-proxy部署的地址',
+      key: 'Fill in the key with the midjourney-proxy key. If no key is set, you can fill in anything',
+      base_url: 'Fill in the address with the deployed address of midjourney-proxy',
       test_model: '',
       model_mapping: ''
     },
@@ -358,7 +359,7 @@ const typeConfig = {
       test_model: '@hf/google/gemma-7b-it'
     },
     prompt: {
-      key: '按照如下格式输入：CLOUDFLARE_ACCOUNT_ID|CLOUDFLARE_API_TOKEN',
+      key: 'Enter in the following format: CLOUDFLARE_ACCOUNT_ID|CLOUDFLARE_API_TOKEN',
       base_url: ''
     },
     modelGroup: 'Cloudflare AI'
@@ -369,7 +370,7 @@ const typeConfig = {
       test_model: 'command-r'
     },
     inputLabel: {
-      provider_models_list: '从Cohere获取模型列表'
+      provider_models_list: 'Get model list from Cohere'
     },
     modelGroup: 'Cohere'
   },
@@ -387,9 +388,9 @@ const typeConfig = {
       models: ['coze-*']
     },
     prompt: {
-      models: '模型名称为coze-{bot_id}，你也可以直接使用 coze-* 通配符来匹配所有coze开头的模型',
+      models: 'The model name is coze-{bot_id}, you can also directly use the coze-* wildcard to match all models starting with coze',
       model_mapping:
-        '模型名称映射， 你可以取一个容易记忆的名字来代替coze-{bot_id}，例如：{"coze-translate": "coze-xxxxx"},注意：如果使用了模型映射，那么上面的模型名称必须使用映射前的名称，上述例子中，你应该在模型中填入coze-translate(如果已经使用了coze-*，可以忽略)。'
+        'Model name mapping, you can use an easy-to-remember name instead of coze-{bot_id}, for example: {"coze-translate": "coze-xxxxx"}, Note: If model mapping is used, then the above model name must use the name before mapping. In the above example, you should fill in coze-translate in the model (if coze-* is already used, it can be ignored).'
     },
     modelGroup: 'Coze'
   },
@@ -398,8 +399,8 @@ const typeConfig = {
       models: ['phi3', 'llama3']
     },
     prompt: {
-      base_url: '请输入你部署的Ollama地址，例如：http://127.0.0.1:11434，如果你使用了cloudflare Zero Trust，可以在下方插件填入授权信息',
-      key: '请随意填写'
+      base_url: 'Please enter your deployed Ollama address, for example: http://127.0.0.1:11434.  If you are using Cloudflare Zero Trust, you can fill in the authorization information in the plugin below',
+      key: 'Please fill in anything'
     }
   },
   40: {
@@ -408,7 +409,7 @@ const typeConfig = {
       test_model: 'hunyuan-lite'
     },
     prompt: {
-      key: '按照如下格式输入：SecretId|SecretKey'
+      key: 'Enter in the following format: SecretId|SecretKey'
     },
     modelGroup: 'Hunyuan'
   },
@@ -417,8 +418,8 @@ const typeConfig = {
       models: ['suno_lyrics', 'chirp-v3-0', 'chirp-v3-5']
     },
     prompt: {
-      key: '密钥填写Suno-API的密钥，如果没有设置密钥，可以随便填',
-      base_url: '地址填写Suno-API部署的地址',
+      key: 'Fill in the key with the Suno-API key. If no key is set, you can fill it in randomly.',
+      base_url: 'Fill in address with deployed Suno-API address.',
       test_model: '',
       model_mapping: ''
     },
@@ -429,7 +430,7 @@ const typeConfig = {
       models: ['claude-3-opus-20240229', 'claude-3-sonnet-20240229', 'claude-3-haiku-20240307']
     },
     prompt: {
-      key: '请参考wiki中的文档获取key. https://github.com/MartialBE/one-hub/wiki/VertexAI',
+      key: 'Please refer to the document in the wiki to get the key. https://github.com/MartialBE/one-hub/wiki/VertexAI',
       other: 'Region|ProjectID',
       base_url: ''
     },
@@ -440,7 +441,7 @@ const typeConfig = {
       models: ['black-forest-labs/FLUX.1-dev', 'black-forest-labs/FLUX.1-schnell']
     },
     inputLabel: {
-      provider_models_list: '从Siliconflow获取模型列表'
+      provider_models_list: 'Get model list from Siliconflow'
     },
     prompt: {
       base_url: ''
@@ -462,7 +463,7 @@ const typeConfig = {
       test_model: 'gpt-4o-mini'
     },
     prompt: {
-      key: '密钥信息请参考https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens',
+      key: 'For key information, please refer to https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens',
       base_url: 'https://models.inference.ai.azure.com'
     },
     modelGroup: 'Github'
@@ -500,7 +501,7 @@ const typeConfig = {
       ]
     },
     prompt: {
-      key: '官方密钥格式： accessKey|secretKey'
+      key: 'Official key format: accessKey|secretKey'
     },
     modelGroup: 'Kling'
   }

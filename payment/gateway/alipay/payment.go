@@ -25,7 +25,7 @@ var client *alipay.Client
 const isProduction bool = true
 
 func (a *Alipay) Name() string {
-	return "支付宝"
+	return "Alipay"
 }
 
 func (a *Alipay) InitClient(config *AlipayConfig) error {

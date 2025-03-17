@@ -12,7 +12,7 @@ export const CHAT_LINKS = [
     sort: 2
   },
   {
-    name: 'AMA 问天',
+    name: 'AMA Wentian',
     url: 'ama://set-api-key?server={server}&key={key}',
     show: false,
     sort: 3

@@ -23,7 +23,7 @@ const Setting = {
   children: [
     {
       id: 'user',
-      title: '用户',
+      title: 'User', // "用户" -> "User"
       type: 'item',
       url: '/panel/user',
       icon: icons.IconUser,
@@ -32,7 +32,7 @@ const Setting = {
     },
     {
       id: 'channel',
-      title: '渠道',
+      title: 'Channel', // "渠道" -> "Channel"
       type: 'item',
       url: '/panel/channel',
       icon: icons.IconSitemap,
@@ -41,14 +41,14 @@ const Setting = {
     },
     {
       id: 'operation',
-      title: '运营',
+      title: 'Operation', // "运营" -> "Operation"
       type: 'collapse',
       icon: icons.IconBasket,
       isAdmin: true,
       children: [
         {
           id: 'user_group',
-          title: '用户分组',
+          title: 'User Group', // "用户分组" -> "User Group"
           type: 'item',
           url: '/panel/user_group',
           icon: icons.IconUsers,
@@ -57,7 +57,7 @@ const Setting = {
         },
         {
           id: 'pricing',
-          title: '模型价格',
+          title: 'Model Pricing', // "模型价格" -> "Model Pricing"
           type: 'item',
           url: '/panel/pricing',
           icon: icons.IconReceipt2,
@@ -75,7 +75,7 @@ const Setting = {
         },
         {
           id: 'model_ownedby',
-          title: '模型归属',
+          title: 'Model Ownership', // "模型归属" -> "Model Ownership"
           type: 'item',
           url: '/panel/model_ownedby',
           icon: icons.IconModel,
@@ -86,14 +86,14 @@ const Setting = {
     },
     {
       id: 'paySetting',
-      title: '支付设置',
+      title: 'Payment Settings', // "支付设置" -> "Payment Settings"
       type: 'collapse',
       icon: icons.IconBrandPaypal,
       isAdmin: true,
       children: [
         {
           id: 'redemption',
-          title: '兑换',
+          title: 'Redemption', // "兑换" -> "Redemption"
           type: 'item',
           url: '/panel/redemption',
           icon: icons.IconCoin,
@@ -102,7 +102,7 @@ const Setting = {
         },
         {
           id: 'payment',
-          title: '支付',
+          title: 'Payment', // "支付" -> "Payment"
           type: 'item',
           url: '/panel/payment',
           icon: icons.IconBrandPaypal,
@@ -114,7 +114,7 @@ const Setting = {
 
     {
       id: 'token',
-      title: '令牌',
+      title: 'Token', // "令牌" -> "Token"
       type: 'item',
       url: '/panel/token',
       icon: icons.IconKey,
@@ -123,7 +123,7 @@ const Setting = {
 
     {
       id: 'profile',
-      title: '个人设置',
+      title: 'Personal Settings', // "个人设置" -> "Personal Settings"
       type: 'item',
       url: '/panel/profile',
       icon: icons.IconUserScan,
@@ -133,7 +133,7 @@ const Setting = {
 
     {
       id: 'setting',
-      title: '设置',
+      title: 'Settings', // "设置" -> "Settings"
       type: 'item',
       url: '/panel/setting',
       icon: icons.IconSettingsCog,

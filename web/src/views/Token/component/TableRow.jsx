@@ -171,7 +171,7 @@ export default function TokensTableRow({ item, manageToken, handleOpenModal, set
       <TableRow tabIndex={item.id}>
         <TableCell>{item.name}</TableCell>
         <TableCell>
-          <Label color={userGroup[item.group]?.color}>{userGroup[item.group]?.name || '跟随用户'}</Label>
+          <Label color={userGroup[item.group]?.color}>{userGroup[item.group]?.name || 'follow user'}</Label>
         </TableCell>
 
         <TableCell>

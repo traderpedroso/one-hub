@@ -51,7 +51,7 @@ func paginationHandler(b *gotgbot.Bot, ctx *ext.Context) error {
 		}
 	default:
 		cb.Answer(b, &gotgbot.AnswerCallbackQueryOpts{
-			Text: "未知的类型!",
+			Text: "Unknown type!",
 		})
 	}
 	return nil

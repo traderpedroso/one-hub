@@ -25,7 +25,7 @@ function renderType(type) {
     return (
       <Label variant="filled" color="error">
         {' '}
-        未知{' '}
+        unknown{' '}
       </Label>
     );
   }
@@ -97,7 +97,7 @@ export default function LogTableRow({ item, userIsAdmin, userGroup }) {
         <TableCell>
           {item?.metadata?.group_name ? (
             <Label color="default" variant="soft">
-              {userGroup[item.metadata.group_name]?.name || '跟随用户'}
+              {userGroup[item.metadata.group_name]?.name || 'follow user'}
             </Label>
           ) : (
             ''

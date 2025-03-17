@@ -15,7 +15,7 @@ const StatusType = {
 function statusLabel(status) {
   let statusOption = StatusType[status];
 
-  return <Label color={statusOption?.color || 'secondary'}> {statusOption?.name || '未知'} </Label>;
+  return <Label color={statusOption?.color || 'secondary'}> {statusOption?.name || 'unknown'} </Label>;
 }
 
 export { StatusType };

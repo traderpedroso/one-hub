@@ -34,7 +34,7 @@ function renderType(types, type) {
     return (
       <Label variant="filled" color="error">
         {' '}
-        未知{' '}
+        unknown{' '}
       </Label>
     );
   }

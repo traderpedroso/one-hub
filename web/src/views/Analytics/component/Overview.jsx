@@ -161,7 +161,7 @@ export default function Overview() {
       </Grid>
 
       <Grid item xs={12} md={6}>
-        <ApexCharts isLoading={orderLoading} chartDatas={orderData} title="充值" />
+        <ApexCharts isLoading={orderLoading} chartDatas={orderData} title="Billing" />
       </Grid>
     </Grid>
   );
@@ -350,11 +350,11 @@ function getUsersData(data, dateRange) {
   const dates = getDates(dateRange.start, dateRange.end);
   const result = [
     {
-      name: '直接注册',
+      name: 'Direct registration',
       data: new Array(dates.length).fill(0)
     },
     {
-      name: '邀请注册',
+      name: 'Invitation registration',
       data: new Array(dates.length).fill(0)
     }
   ];
@@ -372,7 +372,7 @@ function getUsersData(data, dateRange) {
   }
 
   let chartData = generateBarChartOptions(dates, result, '人', 0);
-  chartData.options.title.text = '总注册人数：' + total;
+  chartData.options.title.text = 'Total number of registrations：' + total;
 
   return chartData;
 }
@@ -383,7 +383,7 @@ function getOrdersData(data, dateRange) {
   const dates = getDates(dateRange.start, dateRange.end);
   const result = [
     {
-      name: '充值',
+      name: 'Billing',
       data: new Array(dates.length).fill(0)
     }
   ];

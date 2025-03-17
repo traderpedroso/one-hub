@@ -6,7 +6,7 @@ import (
 	"sync"
 )
 
-var UnknownOwnedBy = "未知"
+var UnknownOwnedBy = "unknown"
 
 const ModelOwnedByReserveID = 1000
 

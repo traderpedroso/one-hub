@@ -12,7 +12,7 @@ const Billing = {
   children: [
     {
       id: 'topup',
-      title: '充值',
+      title: 'Billing',
       type: 'item',
       url: '/panel/topup',
       icon: icons.IconCreditCard,

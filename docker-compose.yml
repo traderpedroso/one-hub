@@ -2,7 +2,10 @@ version: "3.4"
 
 services:
   one-hub:
-    image: martialbe/one-api:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bitcoinannolabs/one-api:latest
     container_name: one-hub
     restart: always
     ports:

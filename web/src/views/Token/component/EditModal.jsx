@@ -230,7 +230,7 @@ const EditModal = ({ open, tokenId, onCancel, onOk, userGroupOptions }) => {
                     setFieldValue('group', value);
                   }}
                 >
-                  <MenuItem value="-1">跟随用户分组</MenuItem>
+                  <MenuItem value="-1">Follow user groups</MenuItem>
                   {userGroupOptions.map((option) => (
                     <MenuItem key={option.value} value={option.value}>
                       {option.label}

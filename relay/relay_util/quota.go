@@ -263,11 +263,11 @@ func (q *Quota) getLogContent() string {
 		if q.price.GetInput() == q.price.GetOutput() {
 			modelRatioStr = fmt.Sprintf("$%s/1k", q.price.FetchInputCurrencyPrice(model.DollarRate))
 		} else {
-			modelRatioStr = fmt.Sprintf("$%s/1k (输入) | $%s/1k (输出)", q.price.FetchInputCurrencyPrice(model.DollarRate), q.price.FetchOutputCurrencyPrice(model.DollarRate))
+			modelRatioStr = fmt.Sprintf("$%s/1k (digitar) | $%s/1k (saída)", q.price.FetchInputCurrencyPrice(model.DollarRate), q.price.FetchOutputCurrencyPrice(model.DollarRate))
 		}
 	}
 
-	return fmt.Sprintf("模型费率 %s，分组倍率 %.2f", modelRatioStr, q.groupRatio)
+	return fmt.Sprintf("taxa do modelo %s，Ampliação do grupo %.2f", modelRatioStr, q.groupRatio)
 }
 
 // 通过 token 数获取消费配额

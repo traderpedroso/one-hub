@@ -1,6 +1,6 @@
 export const priceType = [
-  { value: 'tokens', label: '按Token收费' },
-  { value: 'times', label: '按次收费' }
+  { value: 'tokens', label: 'Charge by Token' },
+  { value: 'times', label: 'Charged by times' }
 ];
 
 export function ValueFormatter(value) {

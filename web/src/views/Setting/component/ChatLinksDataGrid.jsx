@@ -147,7 +147,7 @@ const ChatLinksDataGrid = ({ links, onChange }) => {
       {
         field: 'url',
         sortable: false,
-        headerName: '链接',
+        headerName: 'Link',
         flex: 1,
         minWidth: 300,
         editable: true,
@@ -156,7 +156,7 @@ const ChatLinksDataGrid = ({ links, onChange }) => {
       {
         field: 'show',
         sortable: false,
-        headerName: '是否显示在playground',
+        headerName: 'Whether to display in the playground',
         flex: 1,
         minWidth: 200,
         type: 'boolean',
@@ -166,7 +166,7 @@ const ChatLinksDataGrid = ({ links, onChange }) => {
       {
         field: 'sort',
         sortable: true,
-        headerName: '排序',
+        headerName: 'sort',
         type: 'number',
         flex: 1,
         minWidth: 100,
@@ -176,7 +176,7 @@ const ChatLinksDataGrid = ({ links, onChange }) => {
       {
         field: 'actions',
         type: 'actions',
-        headerName: '操作',
+        headerName: 'action',
         width: 100,
         cellClassName: 'actions',
         hideable: false,

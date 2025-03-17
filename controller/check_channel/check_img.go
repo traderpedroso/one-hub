@@ -203,5 +203,5 @@ func checkChannelImg(record *AccessRecord) {
 		return
 	}
 
-	record.Remark = "未知"
+	record.Remark = "unknown"
 }
