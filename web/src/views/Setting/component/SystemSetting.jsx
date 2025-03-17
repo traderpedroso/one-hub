@@ -133,7 +133,7 @@ const SystemSetting = () => {
         }));
         getOptions();
         await loadStatus();
-        showSuccess('设置成功！');
+        showSuccess('Setup successful!');
       } else {
         showError(message);
       }

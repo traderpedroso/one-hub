@@ -26,7 +26,7 @@ func InitCron() {
 			)),
 		gocron.NewTask(func() {
 			model.UpdateStatistics(model.StatisticsUpdateTypeYesterday)
-			logger.SysLog("更新昨日统计数据")
+			logger.SysLog("Update yesterday's statistics")
 		}),
 	)
 	if err != nil {
@@ -40,7 +40,7 @@ func InitCron() {
 		gocron.DurationJob(10*time.Minute),
 		gocron.NewTask(func() {
 			model.UpdateStatistics(model.StatisticsUpdateTypeToDay)
-			logger.SysLog("10分钟统计数据")
+			logger.SysLog("10 minute statistics")
 		}),
 	)
 

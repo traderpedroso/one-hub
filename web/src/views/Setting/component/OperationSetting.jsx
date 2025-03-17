@@ -108,7 +108,7 @@ const OperationSetting = () => {
 
     if (name.endsWith('Enabled')) {
       await updateOption(name, value);
-      showSuccess('设置成功！');
+      showSuccess('Setup successful!');
     } else {
       setInputs((inputs) => ({ ...inputs, [name]: value }));
     }
