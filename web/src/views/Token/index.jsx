@@ -111,7 +111,7 @@ export default function Token() {
   useEffect(() => {
     let options = [];
     Object.values(userGroup).forEach((item) => {
-      options.push({ label: `${item.name} (倍率：${item.ratio})`, value: item.symbol });
+      options.push({ label: `${item.name} (magnification：${item.ratio})`, value: item.symbol });
     });
     setUserGroupOptions(options);
   }, [userGroup]);

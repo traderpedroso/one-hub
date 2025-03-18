@@ -33,20 +33,20 @@ export function showError(error) {
     if (error.name === 'AxiosError') {
       switch (error.response.status) {
         case 429:
-          enqueueSnackbar('错误：请求次数过多，请稍后再试！', getSnackbarOptions('ERROR'));
+          enqueueSnackbar('Error: Too many requests, please try again later!', getSnackbarOptions('ERROR'));
           break;
         case 500:
-          enqueueSnackbar('错误：服务器内部错误，请联系管理员！', getSnackbarOptions('ERROR'));
+          enqueueSnackbar('Error: Internal server error, please contact the administrator!', getSnackbarOptions('ERROR'));
           break;
         case 405:
-          enqueueSnackbar('本站仅作演示之用，无服务端！', getSnackbarOptions('INFO'));
+          enqueueSnackbar('This site is for demonstration purposes only and has no server!', getSnackbarOptions('INFO'));
           break;
         default:
-          enqueueSnackbar('错误：' + error.message, getSnackbarOptions('ERROR'));
+          enqueueSnackbar('mistake：' + error.message, getSnackbarOptions('ERROR'));
       }
     }
   } else {
-    enqueueSnackbar('错误：' + error, getSnackbarOptions('ERROR'));
+    enqueueSnackbar('mistake：' + error, getSnackbarOptions('ERROR'));
   }
 }
 
@@ -223,7 +223,7 @@ export function renderQuotaWithPrompt(quota, digits) {
   let displayInCurrency = localStorage.getItem('display_in_currency');
   displayInCurrency = displayInCurrency === 'true';
   if (displayInCurrency) {
-    return `（等价金额：${renderQuota(quota, digits)}）`;
+    return `（Equivalent amount：${renderQuota(quota, digits)}）`;
   }
   return '';
 }
